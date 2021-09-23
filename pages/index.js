@@ -1,29 +1,15 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import { getSortedProjects } from "../lib/projects";
-import Project from "../components/project";
+import Link from "next/link"
 
 export default function IndexPage({ allProjectsData }) {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <div className="w-screen h-screen overflow-scroll bg-white dark:bg-black snap snap-y snap-mandatory">
+      <div className="snap-start relative flex items-center justify-center w-screen h-screen">
+        HI
+      </div>
+      <div className="snap-start relative flex items-center justify-center w-screen h-screen">
+        HI
+      </div>
+    </div>
 
-      <section className="py-24">
-        {allProjectsData.map((data) => (
-          <Project key={data.slug} data={data} />
-        ))}
-      </section>
-    </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allProjectsData = getSortedProjects();
-  return {
-    props: {
-      allProjectsData
-    }
-  };
 }

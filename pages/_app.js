@@ -1,16 +1,10 @@
-import { ThemeProvider } from "next-themes";
-import { AnimateSharedLayout } from "framer-motion";
-import "../styles/index.css";
+import 'tailwindcss/tailwind.css'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
   return (
-    <>
-      <ThemeProvider attribute="class">
-        <AnimateSharedLayout>
-          <Component {...pageProps} />
-        </AnimateSharedLayout>
-      </ThemeProvider>
-    </>
+
+      <Component {...pageProps} />
+
   );
 }
 

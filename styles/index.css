@@ -1,7 +1,0 @@
-@import "tailwindcss/base";
-
-/* Start purging... */
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-/* Stop purging. */
